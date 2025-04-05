@@ -1,0 +1,4 @@
+Kesimpulan
+Penggunaan relasi komposisi dalam program ini berperan penting dalam membentuk model data yang lebih terstruktur dan mencerminkan kondisi nyata. Setiap kelas dirancang dengan tanggung jawab yang spesifik, sementara keterkaitan antar kelas menjaga konsistensi dan relevansi data.
+
+Pendekatan ini sangat sesuai untuk diterapkan dalam sistem akademik karena mampu merepresentasikan hubungan yang sebenarnya antara mahasiswa, transkrip nilai, semester, dan mata kuliah secara menyeluruh.
