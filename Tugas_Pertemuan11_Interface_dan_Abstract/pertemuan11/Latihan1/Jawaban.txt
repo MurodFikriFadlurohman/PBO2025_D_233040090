@@ -1,0 +1,65 @@
+1. Sebutkan method abstrak yang terdapat di kelas abstrak Bentuk !
+Jawab :
+Method abstrak yang terdapat di kelas abstrak bentuk adalah luas()
+
+2. Jelaskan apa perbedaannya method luas di kelas Bentuk dan di kelas Lingkaran dan
+   kelas Tabung!
+   Jawab :
+   1. Method luas() di kelas Bentuk
+      - Merupakan method abstrak.
+      - Tidak memiliki isi / implementasi.
+      - Hanya berupa deklarasi, dan harus di-override oleh subclass.
+      - Tujuannya agar setiap subclass (seperti Lingkaran dan Tabung) bisa memberikan implementasi spesifik masing-masing.
+
+   2. Method luas() di kelas Lingkaran
+      - Meng-override method abstrak dari kelas Bentuk.
+      - Memiliki implementasi spesifik untuk menghitung luas lingkaran.
+      - Rumus: π × jariJari × jariJari
+
+   3. Method luas() di kelas Tabung
+      - Juga meng-override method luas() dari Bentuk.
+      - Memiliki implementasi berbeda, disesuaikan untuk menghitung luas permukaan tabung.
+      - Rumus: 2 × π × r × (r + t)
+
+3. Jelaskan bagaimana jika method luas di kelas Tabung dihilangkan atau tidak
+   mengimplementasikannya!
+   Jawab :
+   Jika method luas() tidak diimplementasikan di kelas Tabung, maka akan terjadi error kompilasi,
+   karena Tabung belum memenuhi kontrak dari kelas abstrak Bentuk.
+
+4. Buatlah kelas main sehingga outputnya seperti dibawah ini ?
+   Jawab :
+   public class Main {
+          public static void main(String[] args) {
+              Bentuk lingkaran = new Lingkaran("Lingkaran", 7);
+              Bentuk tabung = new Tabung("Tabung", 7, 10);
+
+              lingkaran.display();
+              tabung.display();
+          }
+      }
+
+5. Buatlah diagram kelas dari contoh program kelas abstrak!
+   Jawab :
+              <<abstract>>
+              Bentuk
+              --------------
+              # PHI: double
+              # jari2: int
+              --------------
+              + Bentuk(int: jari2)
+              + luas(): double [abstract]
+              + getJari2: int
+              + setJari2(int: jari2)
+                    ▲
+                    |
+          -----------------------------
+          |                           |
+      Lingkaran                     Tabung
+      --------------                ---------------
+                                    - tinggi: int
+      --------------                ---------------
+      + Lingkaran(int: jari2)       + Tabung(int: jari2, int: tinggi)
+      + luas(): double              + luas(): double
+                                    + getTinggi()
+                                    + setTinggi(int: tinggi)
